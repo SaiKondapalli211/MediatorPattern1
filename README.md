@@ -2,6 +2,47 @@
 
 The Mediator Pattern is a behavioral design pattern that promotes loose coupling between objects by centralizing their communication in a mediator instead of allowing them to communicate directly. This helps reduce dependencies and makes the system more maintainable.
 
+**What is CQRS pattern?**
+
+CQRS (Command Query Responsibility Segregation) is a design pattern that separates read (query) and write (command) operations in a system. Instead of using the same model for reading and writing data, 
+
+CQRS divides responsibilities to improve performance, scalability, and maintainability.
+
+🔹 Why Use CQRS?
+
+✔ Improves performance – Read and write operations can be optimized independently.
+
+
+✔ Scalability – Reads and writes can be scaled separately.
+
+✔ Better maintainability – Code is cleaner and easier to modify.
+
+✔ Security – Commands can be restricted to specific roles.
+
+✔ Event Sourcing – Works well with event-driven architectures.
+
+**🔹 CQRS Architecture in .NET Core**
+
+In CQRS, we separate:
+
+Commands: Modify data (e.g., CreateOrderCommand).
+
+Queries: Fetch data (e.g., GetOrderQuery).
+
+🔹 Key Components in .NET Core CQRS Implementation:
+
+1️⃣ Commands – Handle write operations.
+
+2️⃣ Command Handlers – Process commands (create, update, delete).
+
+3️⃣ Queries – Handle read operations.
+
+4️⃣ Query Handlers – Process queries (retrieve data).
+
+5️⃣ MediatR – Facilitates communication between commands/queries and handlers.
+
+6️⃣ Entity Framework (EF Core) or Dapper – Used for database access.
+
 
 **1. Can you briefly explain your health insurance application and its architecture?**
 
